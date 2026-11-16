@@ -36,11 +36,11 @@ Edit the .lua to create your own lasting patch.
 
 |[n]|Mode|Parameters|Description|Default|
 |---|---|---|---|---|
-|1|traditional|n/a|
-|2|custom|`s1`|The number of steps played by voice 1 before switching.|`1`|
+|1|Traditional|n/a|
+|2|Custom|`s1`|The number of steps played by voice 1 before switching.|`1`|
 |||`s2`|The number of steps played by voice 2 before switching.|`2`|
-|3|boolean|`prob`|The probability that voice 1 will play an incoming note.  The percentage of probability is represented by a decimal e.g. 0.7=70%|`0.5`|
-|4|random|`min`|The lowest number of steps a voice can play.|`1`|
+|3|Boolean|`prob`|The probability that voice 1 will play an incoming note.  The percentage of probability is represented by a decimal e.g. 0.7=70%|`0.5`|
+|4|Random|`min`|The lowest number of steps a voice can play.|`1`|
 |||`max`|The highest number of steps a voice can play.|`5`|
 
 
