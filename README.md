@@ -29,8 +29,8 @@ The current value of a mode's key parameters are printed when it's loaded.
 
 #### Parameters
 
-Key parameters that define how the modes function can be found for editing at the top of the script.    
-They also have short names so they can easily be redefined live using druid.  
+Key parameters that define how each mode functions can be found for editing at the top of the script.    
+They have shortened names so they can easily be redefined live using druid.  
 Live parameter changes in druid persist between mode changes but not power cycles.
 Edit the .lua to create your own lasting patch.
 
