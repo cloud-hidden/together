@@ -184,5 +184,5 @@ function init()
 	output[4].action = pulse() 
 	move = true
 	mode = {traditional,custom,boolean,random}
-	mode[1]()
+	mode[1]() --edit startup mode
 end 
