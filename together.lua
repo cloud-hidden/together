@@ -10,7 +10,7 @@
 	--custom 
 		s1 = 1
 		s2 = 2
-	--boolean
+	--bernoulli
 		prob = 0.5
 	--random
 		min = 1
@@ -99,9 +99,9 @@ end
 
 --boolean
 
-function boolean()
+function bernoulli()
 
-	print("mode: boolean \n prob = "..prob)
+	print("mode: bernoulli \n prob = "..prob)
 
 	input[2].change = function()
 		if math.random() <= prob then
@@ -183,6 +183,6 @@ function init()
 	output[3].volts = 0
 	output[4].action = pulse() 
 	move = true
-	mode = {traditional,custom,boolean,random}
+	mode = {traditional,custom,bernoulli,random}
 	mode[1]() --edit startup mode
 end 
