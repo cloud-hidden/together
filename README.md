@@ -31,7 +31,7 @@ The current value of a mode's key parameters are printed when it's loaded.
 
 Key parameters that define how each mode functions can be found for editing at the top of the script.    
 They have shortened names so they can be easily redefined live using druid.  
-Live parameter changes in druid persist between mode changes but not power cycles.
+Live parameter changes in druid persist between mode changes but not power cycles.  
 Edit the .lua to create your own lasting patch.
 
 |[n]|Mode|Parameters|Description|Default|
