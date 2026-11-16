@@ -1,5 +1,5 @@
 # together
-A two-voice hocket for Crow with three additional hocket-inspired modes. 
+A two-voice hocket for Crow with four modes.
 
 
 ### <ins>Overview</ins>
