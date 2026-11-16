@@ -1,6 +1,5 @@
 # together
-A two-voice hocket for Crow with four modes.
-
+A hocketing script for Crow with four modes.
 
 ### <ins>Overview</ins>
 together distributes the steps of a CV/gate sequence between two voices.  
