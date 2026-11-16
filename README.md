@@ -21,7 +21,7 @@ Output 3: Voice 2 CV
 Output 4: Voice 2 Gate       
 
 #### Changing Mode  
-The script starts by default in traditional mode.   
+By default, The script starts up in traditional mode. 
 Executing `modes()` in druid will print a list of the modes and the command for changing mode.  
 The command for changing modes is `mode[n]()`.  
 The current value of a mode's key parameters are printed when it's loaded.        
