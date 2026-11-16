@@ -7,7 +7,7 @@ Together distributes a CV/gate sequence between two voices.
 It has four unique modes that determine how the sequence is distributed. 
 #### Modes
 1. Traditional - Each step alternates between the two voices.
-2. Custom - Each voice plays an individually defined number of steps before switching voice.
+2. Custom - Each voice plays an individually defined number of steps before switching.
 3. Boolean - A defined probability determines which voice will play each incoming step.
 4. Random - On each turn, each voice will play a random number of steps from a defined range.
 
