@@ -3,7 +3,7 @@ A two-voice hocket for Crow with four modes
 
 
 ### <ins>Overview</ins>
-Together distributes a CV/gate sequence between two voices.  
+Together distributes the steps of a CV/gate sequence between two voices.  
 It has four unique modes that determine how the sequence is distributed. 
 #### Modes
 1. Traditional - Each step alternates between the two voices.
@@ -39,7 +39,7 @@ Edit the .lua to create your own lasting patch.
 |1|Traditional|n/a|
 |2|Custom|`s1`|The number of steps played by voice 1 before switching.|`1`|
 |||`s2`|The number of steps played by voice 2 before switching.|`2`|
-|3|Boolean|`prob`|The probability that voice 1 will play an incoming note.  The percentage of probability is represented by a decimal e.g. 0.7=70%|`0.5`|
+|3|Boolean|`prob`|The probability that voice 1 will play an incoming step.  The percentage of probability is represented by a decimal e.g. `0.7`=70%|`0.5`|
 |4|Random|`min`|The lowest number of steps a voice can play.|`1`|
 |||`max`|The highest number of steps a voice can play.|`5`|
 
