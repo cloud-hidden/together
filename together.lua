@@ -97,7 +97,7 @@ function custom()
 end
 
 
---boolean
+--bernoulli
 
 function bernoulli()
 
@@ -172,7 +172,7 @@ function random()
 end 
 
 modes = function()
-	print('\n[1] traditional\n[2] custom\n[3] boolean\n[4] random\n\nmode[n]()')
+	print('\n[1] traditional\n[2] custom\n[3] bernoulli\n[4] random\n\nmode[n]()')
 end  
 
 function init()
