@@ -69,7 +69,7 @@ function custom()
 
 			counter = counter + 1
 
-			if counter == s1 then
+			if counter >= s1 then
 				move = not move
 				counter = 0
 				step_1()
@@ -84,7 +84,7 @@ function custom()
 
 		counter = counter + 1
 
-			if counter == s2 then
+			if counter >= s2 then
 				move = not move
 				counter = 0
 				step_1()
