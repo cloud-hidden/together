@@ -19,19 +19,19 @@ Output 2: Voice 1 Gate
 Output 3: Voice 2 CV  
 Output 4: Voice 2 Gate       
 
-#### Changing Mode  
-By default, The script starts up in traditional mode. 
-Executing `modes()` in druid will print a list of the modes and the command for changing mode.  
-The command for changing modes is `mode[n]()`.  
-The current value of a mode's key parameters are printed when it's loaded.        
-
+#### Switching Mode  
+By default, The script starts up in traditional mode.   
+Executing `modes()` in Druid will print a list of the available modes and the command for switching them, `mode[n]()`.
+Alternatively, you can switch by calling a mode's function e.g `traditional()`.  
+The current value of a mode's key parameters are printed when it's loaded.
 
 #### Parameters
 
 Key parameters that define how each mode functions can be found for editing at the top of the script.    
-They have shortened names so they can also be easily redefined live using druid.  
-Live parameter changes in druid persist between mode changes, but not power cycles.  
-Edit the script directly to create your own lasting patch.
+They have shortened names so they can also be easily redefined live using Druid.  
+In custom and Bernoulli modes, live parameter changes take effect on the next incoming trigger.  
+In random mode, new `min` or `max` bounds are applied after the current set of steps has finished playing. 
+Live parameter changes in Druid persist between mode changes, but not power cycles.
 
 |[n]|Mode|Parameters|Description|Default|
 |---|---|---|---|---|
