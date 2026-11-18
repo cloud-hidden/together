@@ -30,7 +30,7 @@ The current value of a mode's key parameters are printed when it's loaded.
 Key parameters that define how each mode functions can be found for editing at the top of the script.    
 They have shortened names so they can also be easily redefined live using Druid.  
 In custom and Bernoulli modes, live parameter changes take effect on the next incoming trigger.  
-In random mode, new `min` or `max` bounds are applied after the current set of steps has finished playing. 
+In random mode, new `min` or `max` bounds are applied after the current set of steps has finished playing.    
 Live parameter changes in Druid persist between mode changes, but not power cycles.
 
 |[n]|Mode|Parameters|Description|Default|
