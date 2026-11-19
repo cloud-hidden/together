@@ -7,20 +7,17 @@
 --output 3: voice 2 CV
 --output 4: voice 2 gate
 
-	--custom 
-		s1 = 1
-		s2 = 2
-	--bernoulli
-		prob = 0.5
-	--random
-		min = 1
-		max = 5
+	
+s1 = 1
+s2 = 2 
+prob = 0.5
+min = 1
+max = 5
+
 
 --traditional
 
 function traditional()
-
-	counter = 0
 
 	print("mode: traditional")
 
@@ -32,13 +29,7 @@ function traditional()
 			output[3].volts = input[1].volts
 			output[4]()
 		end 
-
-		counter = counter + 1
-
-		if counter == 1 then 
-			move = not move
-			counter = 0
-		end 
+		move = not move
 	end
 end
 
@@ -47,54 +38,30 @@ end
 
 function custom()
 
-	local play_voice_1
-	local play_voice_2
-	local step_1
 	counter = 0
+	length = move and s1 or s2
 
 	print("mode: custom \n s1 = "..s1.."\n s2 = "..s2)
 
-	step_1 = function()
-		if move == true then
-			play_voice_1()
-		else 
-			play_voice_2()
-		end 
-	end
+	input[2].change = function()
 
-	play_voice_1 = function()
-		input[2].change = function()
+		if move == true then 
 			output[1].volts = input[1].volts
 			output[2]()
-
-			counter = counter + 1
-
-			if counter >= s1 then
-				move = not move
-				counter = 0
-				step_1()
-			end
-		end 
-	end 
-
-	play_voice_2 = function()
-		input[2].change = function()
+		else
 			output[3].volts = input[1].volts
 			output[4]()
+		end
 
 		counter = counter + 1
 
-			if counter >= s2 then
-				move = not move
-				counter = 0
-				step_1()
-			end
-		end 
-	end
-
-	step_1()
-
-end
+		if counter >= length then
+			move = not move
+			length = move and s1 or s2
+			counter = 0 
+		end
+	end 
+end 
 
 
 --bernoulli
@@ -119,61 +86,31 @@ end
 
 function random()
 
-	local play_voice_1
-	local play_voice_2
-	local step_1
-	number_of_notes = 0
 	counter = 0
+	number_of_notes = math.random(min,max)
 
 	print('mode: random \n min = '..min..'\n max = '..max)
 
-
-	step_1 = function()
-		number_of_notes = math.random(min,max)
+	input[2].change = function()
+		
 		if move == true then 
-			play_voice_1()
-		else
-			play_voice_2()
-		end
-	end 
-
-	play_voice_1 = function()
-		input[2].change = function()
 			output[1].volts = input[1].volts
 			output[2]()
-
-			counter = counter + 1
-
-			if counter == number_of_notes then
-				move = not move
-				counter = 0
-				step_1()
-			end
-		end 
-	end
-
-	play_voice_2 = function()
-		input[2].change = function()
+		else
 			output[3].volts = input[1].volts
 			output[4]()
+		end
 
-			counter = counter + 1
+		counter = counter + 1
 
-			if counter == number_of_notes then
-				move = not move
-				counter = 0
-				step_1()
-			end
-		end 
+		if counter == number_of_notes then
+			move = not move
+			counter = 0
+			number_of_notes = math.random(min,max)
+		end
 	end
-
-	step_1()
-
 end 
-
-modes = function()
-	print('\n[1] traditional\n[2] custom\n[3] bernoulli\n[4] random\n\nmode[n]()')
-end  
+ 
 
 function init()
 	input[1].mode('stream')
@@ -185,4 +122,8 @@ function init()
 	move = true
 	mode = {traditional,custom,bernoulli,random}
 	mode[1]() --edit startup mode
-end 
+end
+
+modes = function()
+	print('\n[1] traditional\n[2] custom\n[3] bernoulli\n[4] random\n\nmode[n]()')
+end  
