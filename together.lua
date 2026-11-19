@@ -105,8 +105,8 @@ function random()
 
 		if counter == number_of_notes then
 			move = not move
-			counter = 0
 			number_of_notes = math.random(min,max)
+			counter = 0
 		end
 	end
 end 
